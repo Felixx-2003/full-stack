@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulah - Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MULAH</h1>
+        <h2>Registration</h2>
+        <p class="subtext">Please fill up your details.</p>
+        
+        <form id="registrationForm" onsubmit="submitRegistration(event)">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter Name" required>
+                <span class="error" id="nameError">*Please insert a name.</span>
+            </div>
+            
+            <div class="input-group">
+                <label for="birthday">Birthday</label>
+                <div class="date-input">
+                    <input type="number" id="day" placeholder="DD" min="1" max="31" required>
+                    <input type="number" id="month" placeholder="MM" min="1" max="12" required>
+                    <input type="number" id="year" placeholder="YYYY" min="1900" max="2025" required>
+                </div>
+                <span class="error" id="birthdayError">*Please insert your birthday.</span>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <span class="error" id="emailError">*Please insert a valid email address.</span>
+                <label>
+                    <input type="checkbox" id="noEmail" name="noEmail"> No email address
+                </label>
+            </div>
+            
+            <button type="submit" class="submit-btn">Continue</button>
+        </form>
+        <p class="powered-by">Powered by MulahRewards.com</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulah - Check Loyalty Points</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MULAH</h1>
+        <h2>Hello, Welcome !</h2>
+        <p class="subtext">Check Your Loyalty Points & Rewards</p>
+        
+        <form id="loyaltyForm" onsubmit="checkLoyalty(event)">
+            <div class="input-group">
+                <select name="countryCode" id="countryCode">
+                    <option value="+60">+60</option>
+                </select>
+                <input type="tel" id="phoneNumber" placeholder="Enter your mobile number" pattern="[0-9]*" required>
+            </div>
+            <button type="submit" class="submit-btn">Check Loyalty Points</button>
+        </form>
+        <p class="powered-by">Powered by MulahRewards.com</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

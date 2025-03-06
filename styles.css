@@ -8,18 +8,26 @@
 body {
     background-color: #ffffff;
     color: #333;
-    min-height: 1136px;
-    width: 640px;
-    margin: 0 auto;
-    padding: 20px;
+    width: 100vw; /* Responsive width */
+    max-width: 640px; /* Prevents exceeding mobile width */
+    min-height: 1136px; /* Ensures enough height */
+    height: 100vh; /* Fills full screen */
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+.wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .container {
     text-align: center;
     width: 100%;
+    max-width: 640px;
 }
 
 h1 {
@@ -52,7 +60,8 @@ h2 {
     margin-bottom: 5px;
 }
 
-.input-group input, .input-group select {
+.input-group input, 
+.input-group select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -111,39 +120,10 @@ h2 {
     margin: 10px 0;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #ffffff;
-    color: #333;
-    /* Enforce mobile dimensions */
-    width: 640px;              /* Fixed width for mobile */
-    min-height: 1136px;        /* Minimum height for mobile */
-    margin: 0 auto;            /* Center the content horizontally */
-    padding: 20px;             /* Optional padding for layout */
-    display: flex;             /* Use flexbox for centering */
-    justify-content: center;   /* Center horizontally */
-    align-items: center;       /* Center vertically */
-}
-
-/* Ensure container matches mobile dimensions */
-.container {
-    text-align: center;
-    width: 100%; /* Full width within 640px body */
-    max-width: 640px; /* Prevent exceeding mobile width */
-}
-
-/* Responsive adjustments for mobile */
-@media (min-width: 641px) {
+/* Responsive Design for Smaller Screens */
+@media (max-width: 640px) {
     body {
-        /* If viewed on desktop, suggest scaling or provide instructions */
         width: 100%;
-        max-width: 640px;
-        margin: 0 auto;
+        padding: 10px;
     }
 }
